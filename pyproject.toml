@@ -8,7 +8,18 @@ authors = ["Andrew Sheridan <andrewasheridan@gmail.com>"]
 python = "^3.9"
 
 [tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+pre-commit = "^2.12.1"
+commitizen = "^2.17.6"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.commitizen]
+version = "0.1.0"
+tag_format = "v$version"
+version_files = [
+  "pyproject.toml:version",
+  "src/leetcode/__version__.py"
+]
